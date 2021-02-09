@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&family=Roboto+Condensed:wght@300;400;700&family=Roboto+Mono:wght@300;400;500;600&family=Roboto:wght@300;400;500;700;900&family=Russo+One&display=swap');
+
+/* * { border: 1px solid red ; } */
+
+html { font-size: 20px; }
+
+body {
+    color: white;
+
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+}
+/* ========================= NORMALIZE */
+h1, h2, h3 p, ul, figure { margin: 0 !important; }
+ul { padding: 0; }
+
+p { 
+    line-height: 1.3rem; 
+    font-family: var(--roboto-mono);
+}
+
+h1 {
+    font-size: var(--header-sz);
+    font-family: var(--russo-one);
+}
+h2 {
+    font-size: var(--title-sz);
+    font-family: var(--roboto);
+    font-weight: 400;
+}
+h3 {
+    font-size: var(--subtitle-sz);
+    font-family: var(--roboto-condensed);
+    font-weight: 400;
+}
+h4 {
+    font-size: var(--extraInfo-sz);
+    font-family: var(--roboto-condensed);
+    font-weight: 300;
+}
+h5 {
+    margin: 0;
+    font-size: 1rem;
+    font-family: var(--roboto-mono);
+    letter-spacing: 1rem;
+    font-weight: 300;
+}
+
+/* ========================= FIN NORMALIZE */
+/* ========================= */
+/* ========================= VARIABLES */
+:root {
+    /* FONT SIZES */
+    --header-sz: 2rem;
+    --logo-sz: 1.7rem;
+    --title-sz: 1.4rem;
+    --subtitle-sz: 1.1rem;
+    --extraInfo-sz: .8rem;
+    --text-sz: 1rem;
+    --link-sz: .7rem;
+    --icon-sz: 2rem;
+    --menuIcon-sz: 1.5rem;
+    /* FONTS */
+    --raleway: 'Raleway', sans-serif;
+    --roboto: 'Roboto', sans-serif;
+    --roboto-mono: 'Roboto Mono', monospace;
+    --roboto-condensed: 'Roboto Condensed', sans-serif;
+    --russo-one: 'Russo One', sans-serif;
+}
+/* ========================= FIN VARIABLES */
+/* ========================= */
+/* ========================= ICONS */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?6uljoz');
+    src:  url('../fonts/icomoon.eot?6uljoz#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?6uljoz') format('truetype'),
+      url('../fonts/icomoon.woff?6uljoz') format('woff'),
+      url('../fonts/icomoon.svg?6uljoz#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-github:before {
+    content: "\e902";
+  }
+  .icon-twitter:before {
+    content: "\e901";
+  }
+  .icon-instagram:before {
+    content: "\e904";
+  }
+  .icon-facebook:before {
+    content: "\e903";
+  }
+  .icon-menu:before {
+    content: "\e900";
+  }
+/* ========================= FIN ICONS */
+/* ========================= MENU */
+.header_menu_icon {
+    display: none;
+    top: .5rem;
+    left: .5rem;
+    width: 40px;
+    height: 40px;
+    z-index: 3;
+    color: white;
+    padding: 0 5px;
+    position: fixed;
+    line-height: 40px;
+    text-align: center;
+    border-radius: .5rem;
+    font-size: var(--menuIcon-sz);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.header {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #0F2027;
+}
+.header_content {
+    width: 1000px;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: space-between;
+}
+.header_logo_container {
+    display: inherit;
+    align-items: center;
+}
+.header_logo {
+    transition: .2s;
+    min-width: 118.95px;
+}
+.header_logo a {
+    padding-left: 1.5rem;
+    color: white;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-size: var(--logo-sz);
+}
+.header_menu_container {
+    display: inherit;
+    align-items: center;
+}
+.header_menu {
+    width: 100%;
+}
+.header_menu ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+.header_menu li {
+    list-style: none;
+    padding: 0 .5rem;
+}
+.header_menu a {
+    transition: .2s;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: var(--link-sz);
+    font-family: var(--raleway);
+}
+/* ===== SAME */
+.header_menu a:hover,
+.header_logo a:hover {
+    color: #4a8daa;
+}
+.header_menu a {
+    color: white;
+}
+/* ========================= FIN MENU */
+/* ========================= BODY */
+/* ========================= HERO SEC */
+.hero_section {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/image.jpeg');
+}
+.hero_title_container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.hero_title {
+    margin: 0 .5rem;
+    max-width: 690px;
+    align-self: center;
+    text-transform: uppercase;
+}
+.hero_title h1 {
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+}
+/* ========================= FIN HERO SEC */
+/* ========================= BODY */
+.body_container {
+    padding-bottom: 1rem;
+    margin: auto;
+    max-width: 1000px;
+}
+.about_me_container {
+    padding: 0 .5rem;
+}
+.about_me_title h2 {
+    padding: 1rem 0;
+}
+/* .about_me_information p {
+    font-size: var(--text-sz);
+} */
+.portafolio_container {
+    padding: 0 .5rem;
+}
+.portafolio_title h2 {
+    padding: 1rem 0;
+} 
+.portafolio_subtitle h3 {
+    padding: .5rem 0;
+}
+/* ============ PROYECTOS */
+/* .article_project {
+    width: 90%;
+} */
+.article_project_title h2 {
+    padding: 1rem 0 .5rem;
+}
+.article_project_description {
+    margin-bottom: .5rem;
+}
+.article_project_description h4 {
+    padding: .5rem 0;
+    font-size: var(--extraInfo-sz);
+    letter-spacing: .6px;
+}
+.article_project_description p {
+    max-width: 75%;
+}
+.article_project_image figure {
+    transition: .2s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.article_project_image figure:hover {
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+}
+.article_project_image img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    vertical-align: top;
+}
+/* ============ FIN PROYECTOS */
+/* ============ MORE more_about ME */
+.more_about_me_container {
+    padding: 0 .5rem;
+}
+.more_about_me_title h2 {
+    padding: 1rem 0 .5rem;
+}
+/* ============ FIN MORE more_about ME */
+/* ============ FOOTER */
+.footer_container {
+    /* height: 300px; */
+    width: 100%;
+    background-color: #0F2027;
+}
+/* .footer {
+    height: inherit;
+    width: inherit;
+} */
+.footer_contact_me_container {
+    margin: auto;
+    height: 300px;
+    display: flex;
+    max-width: 1000px;
+    align-items: center;
+    /* justify-content: center; */
+}
+.footer_contact_me {
+    width: 100%;
+    display: inherit;
+    margin: 0 1.8rem 3rem 1.5rem;
+    justify-content: space-between;
+}
+.footer_mail {
+    display: flex;
+    flex-flow: wrap;
+}
+.footer_mail input {
+    width: 100%;
+    outline: none;
+    border-radius: .3rem;
+    padding: .5rem .5rem;
+    font-size: var(--text-sz);
+    font-family: var(--roboto-mono);
+}
+.footer_mail,
+.footer_social {
+    max-width: 300px;
+    text-align: center;
+}
+.footer_mail h3, 
+.footer_social h3 {
+    margin: 2rem 0;
+}
+.footer_icons_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+#ico:nth-of-type(1) {
+    justify-self: left;
+}
+#ico:nth-of-type(3) {
+    justify-self: right;
+}
+.footer_icons_container i {
+    transition: .3s;
+    font-size: var(--icon-sz);
+}
+.footer_designed_by {
+    position: relative;
+    text-transform: uppercase;
+}
+.footer h5 {
+    /* bottom: 0; */
+    /* width: inherit; */
+    text-align: center;
+    /* position: absolute; */
+    line-height: 2.5rem;
+}
+.footer h5 span {
+    white-space: nowrap;
+    font-weight: 500;
+}
+/* ============ FIN FOOTER ========================= FIN BODY */

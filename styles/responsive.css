@@ -1,0 +1,120 @@
+@media screen and (min-width: 1024px) {
+    .hero_section {
+        height: 50vh;
+    }
+}
+@media screen and (max-width: 768px) {
+    .header {
+        /* padding: 1rem 0; */
+        height: auto;
+        /* display: block; */
+    }
+    .header_content {
+        justify-content: center;
+    }
+    .header_menu_icon {
+        display: initial;
+    }
+    .header_logo_container {
+        padding: .5rem 0;
+    }
+    .header_menu_container,
+    .header_image_container {
+        display: initial;
+    }
+    .header_image {
+        padding: initial;
+        text-align: center;
+    }
+    .header_image h1 {
+        margin: 0;
+    }
+    .header_menu {
+        top: 0;
+        left: -100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.6);
+        transition: .3s;
+    }
+    .header_menu.is_active {
+        left: 0;
+    }
+    .header_menu ul {
+        padding: 0;
+        display: flex;
+        height: inherit;
+        max-height: 200px;
+        flex-flow: column;
+        text-align: center;
+    }
+    .footer_contact_me_container {
+        height: initial;
+    }
+    .footer_contact_me {
+        margin-bottom: 0;
+    }
+    .footer_mail,
+    .footer_social {
+        margin: 1rem 1rem;
+    }
+    .footer_mail h3 {
+        margin: 1rem 0 2rem;
+    }
+    .footer h5 {
+        padding-bottom: .5rem;
+        line-height: 2rem;
+    }
+    .footer_icons_container {
+        max-width: 250px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 480px) {
+    /* p {
+        font-size: .8rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    h2 {
+        font-size: 1rem;
+    } */
+    html {
+        font-size: 20px;
+    }
+    .article_project_description p {
+        max-width: none;
+    }
+    .footer_container {
+        height: auto;
+    }
+    .footer_contact_me {
+        display: block;
+    }
+    .footer_mail,
+    .footer_social {
+        max-width: none;
+    }
+    .footer_mail,
+    .footer_social {
+        /* margin: 1rem .5rem; */
+        width: auto;
+    }
+    .footer_designed_by {
+        margin: 0;
+    }
+    .footer h5 {
+        letter-spacing: .2rem;
+        font-size: .8rem;
+        position: initial;
+    }
+}
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+}
